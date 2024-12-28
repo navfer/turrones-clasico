@@ -11,47 +11,45 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/secundario">
 
 
         <ImageView
             android:id="@+id/imagenCategoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/nombreCategoria"
             android:layout_width="201dp"
             android:layout_height="22dp"
-            android:text="Nombre"
+            android:text="Nombre categoría :)"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.726"
+            app:layout_constraintHorizontal_bias="0.587"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.15"
-            android:textStyle="bold"
-            android:textSize="16sp"/>
+            app:layout_constraintVertical_bias="0.205" />
 
         <TextView
             android:id="@+id/descripcionCategoria"
-            android:layout_width="200dp"
-            android:layout_height="49dp"
-            android:text="Esta va a ser la descripcion de la categoría"
+            android:layout_width="254dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="14dp"
+            android:text="Esta va a ser la descripcion de la categoría."
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.723"
+            app:layout_constraintHorizontal_bias="0.808"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.658" />
+            app:layout_constraintTop_toBottomOf="@+id/nombreCategoria"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

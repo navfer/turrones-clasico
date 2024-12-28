@@ -34,7 +34,11 @@ class CategoriaAdaptador(private val categorias: List<Categoria>): RecyclerView.
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val categoria = categorias[position]
 
+        holder.nombre.text = categoria.nombre
+        holder.descripcion.text = categoria.descripcion
+        holder.imagen.setImageResource(categoria.imagen)
     }
 
 }

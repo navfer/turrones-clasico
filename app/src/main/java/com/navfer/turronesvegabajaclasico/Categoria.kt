@@ -6,16 +6,22 @@ package com.navfer.turronesvegabajaclasico
  */
 data class Categoria(
     var nombre: String,
-    var imagen: String, //El parámetro es la dirección de la imagen
+    var imagen: Int,
     var descripcion: String,
     var estado: Boolean,
     val productos: MutableList<Producto> = mutableListOf(),
     val subcategorias: MutableList<Categoria> = mutableListOf()
 ) {
-    init {
-        Categoria("Turrones","res/drawable/turron_imagen.jpg","Turrones",true)
-        Categoria("Pasteleria","res/drawable/pasteleria_imagen.jpg","Pastelería",true)
-        Categoria("Packs","res/drawable/pack_imagen.jpg","Pack combinados",true)
+    companion object {
+        val listaCategorias = mutableListOf<Categoria>()
+
+        init {
+            listaCategorias.add(Categoria("Turrones", R.drawable.turron_imagen, "Turrones de todas las clases.", true))
+            listaCategorias.add(Categoria("Pasteleria", R.drawable.pasteleria_imagen, "Nuestra sección de pastelería con todo lo necesario para estas fiestas.", true))
+            listaCategorias.add(Categoria("Packs", R.drawable.pack_imagen, "Nuestros pack combinados, las mejores selecciones para todos los gustos.", true))
+        }
+
+        fun getCategorias(): List<Categoria> = listaCategorias
     }
 
     fun addProducto(producto: Producto) {
@@ -26,5 +32,4 @@ data class Categoria(
     fun addSubcategoria(subcategoria: Categoria) {
         subcategorias.add(subcategoria)
     }
-
 }
