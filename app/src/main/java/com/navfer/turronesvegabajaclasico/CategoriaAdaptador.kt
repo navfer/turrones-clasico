@@ -8,7 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import java.util.function.Consumer
 
-class CategoriaAdaptador(private val categorias: List<Categoria>): RecyclerView.Adapter<CategoriaAdaptador.ViewHolder>() {
+class CategoriaAdaptador(
+    private val categorias: List<Categoria>,
+    private val onClick: (Categoria) -> Unit
+) : RecyclerView.Adapter<CategoriaAdaptador.ViewHolder>() {
 
     private var posicionSelecionada: Int = -1
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
@@ -39,6 +42,8 @@ class CategoriaAdaptador(private val categorias: List<Categoria>): RecyclerView.
         holder.nombre.text = categoria.nombre
         holder.descripcion.text = categoria.descripcion
         holder.imagen.setImageResource(categoria.imagen)
+        //Maneja que se haga click en la categoria
+        holder.itemView.setOnClickListener { onClick(categoria) }
     }
 
 }

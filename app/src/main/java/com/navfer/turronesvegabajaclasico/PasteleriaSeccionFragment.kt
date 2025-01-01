@@ -8,6 +8,12 @@ import android.view.ViewGroup
 
 class PasteleriaSeccionFragment : Fragment() {
 
+    companion object {
+        fun newInstance(): PasteleriaSeccionFragment {
+            return PasteleriaSeccionFragment()
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

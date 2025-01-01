@@ -8,6 +8,11 @@ import android.view.ViewGroup
 
 
 class TurronesSeccionFragment : Fragment() {
+    companion object {
+        fun newInstance(): TurronesSeccionFragment {
+            return TurronesSeccionFragment()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

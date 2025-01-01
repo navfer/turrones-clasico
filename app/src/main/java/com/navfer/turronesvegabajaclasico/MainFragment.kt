@@ -30,7 +30,28 @@ class MainFragment : Fragment() {
 
         //Configuración del recyclerView
         val categorias = Categoria.getCategorias()
-        val adaptador = CategoriaAdaptador(categorias)
+        val adaptador = CategoriaAdaptador(categorias) { seleccion ->
+
+            when(seleccion.nombre){
+
+                //PULSAMOS EN SECCION DE TURRONES
+                "Turrones" -> {
+                    (activity as? MainActivity)?.cambiarFragmento(TurronesSeccionFragment.newInstance(), "Turrones")
+                }
+
+                //PULSAMOS EN SECCION DE PASTELERIA
+                "Pasteleria" -> {
+                    (activity as? MainActivity)?.cambiarFragmento(PasteleriaSeccionFragment.newInstance(), "Pastelería")
+
+                }
+
+                //PULSAMOS EN SECCION DE PACK Y COMBINADOS
+                "Packs" -> {
+                    (activity as? MainActivity)?.cambiarFragmento(CombinadosFragment.newInstance(), "Packs y combinados")
+
+                }
+            }
+        }
 
         /*
         LinearLayoutManager -> lista vertical

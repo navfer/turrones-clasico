@@ -7,6 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 
 class CombinadosFragment : Fragment() {
+
+    companion object {
+        fun newInstance(): CombinadosFragment {
+            return CombinadosFragment()
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
