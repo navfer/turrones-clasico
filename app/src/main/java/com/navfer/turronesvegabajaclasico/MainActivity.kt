@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity() {
         if (supportFragmentManager.backStackEntryCount > 0) {
             supportFragmentManager.popBackStack()
             supportActionBar?.setDisplayHomeAsUpEnabled(false)
+            val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)
+            toolbar.setTitle("Turrones VegaBaja")
             return true
         }
         return super.onSupportNavigateUp()
