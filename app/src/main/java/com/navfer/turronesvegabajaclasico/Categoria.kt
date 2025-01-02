@@ -125,10 +125,15 @@ data class Categoria(
             listaCategorias.add(Categoria("Turrones", R.drawable.turron_imagen, "Turrones de todas las clases.", true, subcategorias = subTurrones))
             listaCategorias.add(Categoria("Pasteleria", R.drawable.pasteleria_imagen, "Nuestra sección de pastelería con todo lo necesario para estas fiestas.", true, subcategorias = subPasteleria))
             listaCategorias.add(Categoria("Packs", R.drawable.pack_imagen, "Nuestros pack combinados, las mejores selecciones para todos los gustos.", true, productos = productosPacks))
-
         }
 
         fun getCategorias(): List<Categoria> = listaCategorias
+
+        fun getSubcategorias(nombre:String): List<Categoria>{
+            val categorias = Categoria.getCategorias().find { it.nombre == nombre }
+            val sub = categorias?.subcategorias ?: listOf()
+            return sub
+        }
     }
 
     fun addProducto(producto: Producto) {

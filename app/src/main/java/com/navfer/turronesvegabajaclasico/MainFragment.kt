@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-
 class MainFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,13 +41,11 @@ class MainFragment : Fragment() {
                 //PULSAMOS EN SECCION DE PASTELERIA
                 "Pasteleria" -> {
                     (activity as? MainActivity)?.cambiarFragmento(PasteleriaSeccionFragment.newInstance(), "Pastelería")
-
                 }
 
                 //PULSAMOS EN SECCION DE PACK Y COMBINADOS
                 "Packs" -> {
                     (activity as? MainActivity)?.cambiarFragmento(CombinadosFragment.newInstance(), "Packs y combinados")
-
                 }
             }
         }

@@ -11,14 +11,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="141dp"
         android:background="@color/secundario">
 
 
         <ImageView
             android:id="@+id/imagenCategoria"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="113dp"
+            android:layout_height="139dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,20 +33,20 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.587"
+            app:layout_constraintHorizontal_bias="0.659"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.205" />
+            app:layout_constraintVertical_bias="0.126" />
 
         <TextView
             android:id="@+id/descripcionCategoria"
-            android:layout_width="254dp"
-            android:layout_height="43dp"
+            android:layout_width="230dp"
+            android:layout_height="79dp"
             android:layout_marginTop="14dp"
             android:text="Esta va a ser la descripcion de la categoría."
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.808"
+            app:layout_constraintHorizontal_bias="0.775"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nombreCategoria"
             app:layout_constraintVertical_bias="0.0" />
