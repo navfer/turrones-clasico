@@ -14,7 +14,6 @@
         android:layout_height="141dp"
         android:background="@color/secundario">
 
-
         <ImageView
             android:id="@+id/imagenCategoria"
             android:layout_width="113dp"
@@ -36,21 +35,19 @@
             app:layout_constraintHorizontal_bias="0.659"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.126" />
+            app:layout_constraintVertical_bias="0.134" />
 
         <TextView
             android:id="@+id/descripcionCategoria"
-            android:layout_width="230dp"
-            android:layout_height="79dp"
+            android:layout_width="232dp"
+            android:layout_height="89dp"
             android:layout_marginTop="14dp"
             android:text="Esta va a ser la descripcion de la categoría."
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.775"
+            app:layout_constraintHorizontal_bias="0.785"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nombreCategoria"
             app:layout_constraintVertical_bias="0.0" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

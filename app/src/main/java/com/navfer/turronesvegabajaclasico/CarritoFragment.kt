@@ -14,4 +14,12 @@ class CarritoFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_carrito, container, false)
     }
 
+    companion object {
+        fun newInstance(): CarritoFragment {
+            return CarritoFragment()
+        }
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
 }

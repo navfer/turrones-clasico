@@ -134,6 +134,28 @@ data class Categoria(
             val sub = categorias?.subcategorias ?: listOf()
             return sub
         }
+
+        fun getProductos(nombre:String): List<Producto>{
+            val productos = mutableListOf<Producto>()
+
+            //busca en la categoria
+            val categoria = Categoria.getCategorias().find { it.nombre == nombre }
+
+            if (categoria != null) {
+                productos.addAll(categoria.productos)
+            } else {
+                //busca en las subcategorias en caso de no estar
+                Categoria.getCategorias().forEach { categoria ->
+                    val subcategoria = categoria.subcategorias.find { it.nombre == nombre }
+                    if (subcategoria != null) {
+                        productos.addAll(subcategoria.productos)
+                        return productos
+                    }
+                }
+            }
+
+            return productos
+        }
     }
 
     fun addProducto(producto: Producto) {

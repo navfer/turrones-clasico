@@ -33,12 +33,7 @@ class MainActivity : AppCompatActivity() {
          */
         val botonCarrito: FloatingActionButton = findViewById(R.id.botonCarritoCompra)
         botonCarrito.setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, CarritoFragment())
-                .addToBackStack(null)
-                .commit()
-
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            cambiarFragmento(CarritoFragment.newInstance(),"Mi cesta")
         }
     }
 
@@ -56,9 +51,9 @@ class MainActivity : AppCompatActivity() {
     /**
      * La función recibe como parámetros el fragmentos al que se cambiará y el título del toolbar para el nuevo fragmento
      */
-    fun cambiarFragmento(fragment: Fragment, titulo: String) {
+    fun cambiarFragmento(fragmento: Fragment, titulo: String) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerView, fragment)
+            .replace(R.id.fragmentContainerView, fragmento)
             .addToBackStack(null)
             .commit()
 

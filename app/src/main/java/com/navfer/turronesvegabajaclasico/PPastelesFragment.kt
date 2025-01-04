@@ -9,14 +9,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class CombinadosFragment : Fragment() {
+
+class PPastelesFragment : Fragment() {
 
     companion object {
-        fun newInstance(): CombinadosFragment {
-            return CombinadosFragment()
+        fun newInstance(): PPastelesFragment {
+            return PPastelesFragment()
         }
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -27,17 +27,18 @@ class CombinadosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_combinados, container, false)
+        return inflater.inflate(R.layout.fragment_p_pasteles, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
 
-        // Configuración del RecyclerView
-        val productos = Categoria.getProductos("Packs")
+        //confi recyclerView
+        val productos = Categoria.getProductos("Pasteles")
         val adaptador = ProductoAdaptador(productos)
         Log.d("Info", "$productos")
+
 
         val layoutManager = LinearLayoutManager(requireContext())
         recyclerView.layoutManager = layoutManager

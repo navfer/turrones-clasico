@@ -39,27 +39,46 @@ class TurronesSeccionFragment : Fragment() {
             when(seleccion.nombre){
 
                 "Alicante" -> {
-
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, TAlicanteFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
                 }
 
-                "jijona" -> {
+                "Jijona" -> {
 
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, TJijonaFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
                 }
 
                 "Guirlache" ->{
-
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, TGuirlacheFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
                 }
 
                 "Mazapan" -> {
-
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, TMazapanFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
                 }
 
                 "Cacahuete" -> {
-
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, TCacahueteFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
                 }
 
                 "A la piedra" -> {
-
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, TPiedraFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
                 }
             }
         }
