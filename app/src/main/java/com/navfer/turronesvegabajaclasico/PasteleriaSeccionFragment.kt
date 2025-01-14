@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -39,29 +40,20 @@ class PasteleriaSeccionFragment : Fragment() {
             when(seleccion.nombre){
 
                 "Mazapanes" -> {
-                    Log.d("Info", "Se ha seleccionado mazapanes")
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, PMazapanesFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit()
+                    findNavController().navigate(R.id.action_pasteleriaSeccionFragment_to_PMazapanesFragment)
+
 
                 }
 
                 "Polvorones" -> {
-                    Log.d("Info", "Se ha seleccionado polvorones")
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, PPolvoronesFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit()
+                    findNavController().navigate(R.id.action_pasteleriaSeccionFragment_to_PPolvoronesFragment)
+
 
                 }
 
                 "Pasteles" -> {
-                    Log.d("Info", "Se ha seleccionado pasteles")
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, PPastelesFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit()
+                    findNavController().navigate(R.id.action_pasteleriaSeccionFragment_to_PPastelesFragment)
+
                 }
             }
         }

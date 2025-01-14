@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -39,46 +40,34 @@ class TurronesSeccionFragment : Fragment() {
             when(seleccion.nombre){
 
                 "Alicante" -> {
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, TAlicanteFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit()
+                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TAlicanteFragment)
+
                 }
 
                 "Jijona" -> {
 
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, TJijonaFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit()
+                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TJijonaFragment)
+
                 }
 
                 "Guirlache" ->{
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, TGuirlacheFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit()
+                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TGuirlacheFragment)
+
                 }
 
                 "Mazapan" -> {
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, TMazapanFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit()
+                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TMazapanFragment)
+
                 }
 
                 "Cacahuete" -> {
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, TCacahueteFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit()
+                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TCacahueteFragment)
+
                 }
 
                 "A la piedra" -> {
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, TPiedraFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit()
+                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TPiedraFragment)
+
                 }
             }
         }

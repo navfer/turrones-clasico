@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.navfer.turronesvegabajaclasico.MainFragment"
+        android:label="Turrones Vega Baja"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_combinadosFragment"
+            app:destination="@id/combinadosFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_pasteleriaSeccionFragment"
+            app:destination="@id/pasteleriaSeccionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_turronesSeccionFragment"
+            app:destination="@id/turronesSeccionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="com.navfer.turronesvegabajaclasico.CarritoFragment"
+        android:label="Mi carrito"
+        tools:layout="@layout/fragment_carrito" />
+    <fragment
+        android:id="@+id/combinadosFragment"
+        android:name="com.navfer.turronesvegabajaclasico.CombinadosFragment"
+        android:label="Packs combinados"
+        tools:layout="@layout/fragment_combinados" >
+        <action
+            android:id="@+id/action_combinadosFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PMazapanesFragment"
+        android:name="com.navfer.turronesvegabajaclasico.PMazapanesFragment"
+        android:label="Pastelería: Mazapanes"
+        tools:layout="@layout/fragment_p_mazapanes" />
+    <fragment
+        android:id="@+id/PPastelesFragment"
+        android:name="com.navfer.turronesvegabajaclasico.PPastelesFragment"
+        android:label="Pastelería: Pasteles"
+        tools:layout="@layout/fragment_p_pasteles" />
+    <fragment
+        android:id="@+id/PPolvoronesFragment"
+        android:name="com.navfer.turronesvegabajaclasico.PPolvoronesFragment"
+        android:label="Pastelería: Polvorones"
+        tools:layout="@layout/fragment_p_polvorones" />
+    <fragment
+        android:id="@+id/pasteleriaSeccionFragment"
+        android:name="com.navfer.turronesvegabajaclasico.PasteleriaSeccionFragment"
+        android:label="Pastelería"
+        tools:layout="@layout/fragment_pasteleria_seccion" >
+        <action
+            android:id="@+id/action_pasteleriaSeccionFragment_to_PMazapanesFragment"
+            app:destination="@id/PMazapanesFragment" />
+        <action
+            android:id="@+id/action_pasteleriaSeccionFragment_to_PPastelesFragment"
+            app:destination="@id/PPastelesFragment" />
+        <action
+            android:id="@+id/action_pasteleriaSeccionFragment_to_PPolvoronesFragment"
+            app:destination="@id/PPolvoronesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/turronesSeccionFragment"
+        android:name="com.navfer.turronesvegabajaclasico.TurronesSeccionFragment"
+        android:label="Turrones"
+        tools:layout="@layout/fragment_turrones_seccion" >
+        <action
+            android:id="@+id/action_turronesSeccionFragment_to_TAlicanteFragment"
+            app:destination="@id/TAlicanteFragment" />
+        <action
+            android:id="@+id/action_turronesSeccionFragment_to_TCacahueteFragment"
+            app:destination="@id/TCacahueteFragment" />
+        <action
+            android:id="@+id/action_turronesSeccionFragment_to_TGuirlacheFragment"
+            app:destination="@id/TGuirlacheFragment" />
+        <action
+            android:id="@+id/action_turronesSeccionFragment_to_TJijonaFragment"
+            app:destination="@id/TJijonaFragment" />
+        <action
+            android:id="@+id/action_turronesSeccionFragment_to_TMazapanFragment"
+            app:destination="@id/TMazapanFragment" />
+        <action
+            android:id="@+id/action_turronesSeccionFragment_to_TPiedraFragment"
+            app:destination="@id/TPiedraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TAlicanteFragment"
+        android:name="com.navfer.turronesvegabajaclasico.TAlicanteFragment"
+        android:label="Turrones: Alicante"
+        tools:layout="@layout/fragment_t_alicante" />
+    <fragment
+        android:id="@+id/TCacahueteFragment"
+        android:name="com.navfer.turronesvegabajaclasico.TCacahueteFragment"
+        android:label="Turrones: Cacahuete"
+        tools:layout="@layout/fragment_t_cacahuete" />
+    <fragment
+        android:id="@+id/TGuirlacheFragment"
+        android:name="com.navfer.turronesvegabajaclasico.TGuirlacheFragment"
+        android:label="Turrones: Guirlache"
+        tools:layout="@layout/fragment_t_guirlache" />
+    <fragment
+        android:id="@+id/TJijonaFragment"
+        android:name="com.navfer.turronesvegabajaclasico.TJijonaFragment"
+        android:label="Turrones: Jijona"
+        tools:layout="@layout/fragment_t_jijona" />
+    <fragment
+        android:id="@+id/TMazapanFragment"
+        android:name="com.navfer.turronesvegabajaclasico.TMazapanFragment"
+        android:label="Turrones: Mazapán"
+        tools:layout="@layout/fragment_t_mazapan" />
+    <fragment
+        android:id="@+id/TPiedraFragment"
+        android:name="com.navfer.turronesvegabajaclasico.TPiedraFragment"
+        android:label="Turrones: A la piedra"
+        tools:layout="@layout/fragment_t_piedra" />
+
+    <action
+        android:id="@+id/action_global_carritoFragment"
+        app:destination="@id/carritoFragment" />
+
+</navigation>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,17 +36,17 @@ class MainFragment : Fragment() {
 
                 //PULSAMOS EN SECCION DE TURRONES
                 "Turrones" -> {
-                    (activity as? MainActivity)?.cambiarFragmento(TurronesSeccionFragment.newInstance(), "Turrones")
+                    findNavController().navigate(R.id.action_mainFragment_to_turronesSeccionFragment)
                 }
 
                 //PULSAMOS EN SECCION DE PASTELERIA
                 "Pasteleria" -> {
-                    (activity as? MainActivity)?.cambiarFragmento(PasteleriaSeccionFragment.newInstance(), "Pastelería")
+                    findNavController().navigate(R.id.action_mainFragment_to_pasteleriaSeccionFragment)
                 }
 
                 //PULSAMOS EN SECCION DE PACK Y COMBINADOS
                 "Packs" -> {
-                    (activity as? MainActivity)?.cambiarFragmento(CombinadosFragment.newInstance(), "Packs y combinados")
+                    findNavController().navigate(R.id.action_mainFragment_to_combinadosFragment)
                 }
             }
         }
