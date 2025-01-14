@@ -1,6 +1,8 @@
 # Turrones Vega Baja   
 
-Aplicación móvil sencilla de gestión de tienda de turrones y su compra de productos.  
+Aplicación móvil sencilla de gestión de tienda de turrones y su compra de productos.
+Este proyecto está desarrollado utilizando la arquitectura tradicional de Android, con vistas XML y actividades.  
+
 Integra los siguientes elementos:  
 - Actividades.  
 - Fragmentos.  
