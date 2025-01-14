@@ -8,9 +8,9 @@ Integra los siguientes elementos:
 
 ## Construcción
 Se utilizaron las siguientes tecnologías para su construcción:  
-- Kotlin, lenguaje oficial y principal del desarrollo Android.
-- LiveData, objeto observable que notifica cambios de datos en la vista.
-- ViewModel, actuando como puente entre la vista y el modelo.
-- Android Studio como IDE de trabajo.
+- `Kotlin`: lenguaje oficial y principal del desarrollo Android.
+- `LiveData`: objeto observable que notifica cambios de datos en la vista.
+- `ViewModel`: actuando como puente entre la vista y el modelo.
+- `Android Studio` como IDE de trabajo.
 
 ## Estructura del directorio del proyecto
