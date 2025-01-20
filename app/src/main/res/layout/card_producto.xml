@@ -30,31 +30,19 @@
 
         <Button
             android:id="@+id/btn_add"
-            android:layout_width="59dp"
-            android:layout_height="48dp"
+            android:layout_width="127dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="8dp"
             android:backgroundTint="@color/principal"
-            android:text="+"
+            android:text="Añadir"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintHorizontal_bias="0.059"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/btn_delete"
-            android:layout_width="59dp"
-            android:layout_height="48dp"
-            android:backgroundTint="@color/principal"
-            android:text="-"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="UnknownId" />
 
         <TextView
             android:id="@+id/nombreProducto"

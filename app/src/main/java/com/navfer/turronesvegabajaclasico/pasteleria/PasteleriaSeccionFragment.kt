@@ -1,4 +1,4 @@
-package com.navfer.turronesvegabajaclasico
+package com.navfer.turronesvegabajaclasico.pasteleria
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,12 +8,15 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.navfer.turronesvegabajaclasico.Categoria
+import com.navfer.turronesvegabajaclasico.CategoriaAdaptador
+import com.navfer.turronesvegabajaclasico.R
 
+class PasteleriaSeccionFragment : Fragment() {
 
-class TurronesSeccionFragment : Fragment() {
     companion object {
-        fun newInstance(): TurronesSeccionFragment {
-            return TurronesSeccionFragment()
+        fun newInstance(): PasteleriaSeccionFragment {
+            return PasteleriaSeccionFragment()
         }
     }
 
@@ -26,7 +29,7 @@ class TurronesSeccionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_turrones_seccion, container, false)
+        return inflater.inflate(R.layout.fragment_pasteleria_seccion, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -34,39 +37,24 @@ class TurronesSeccionFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
 
         // Configuración del RecyclerView
-        val sub = Categoria.getSubcategorias("Turrones")
+        val sub = Categoria.getSubcategorias("Pasteleria")
         val adaptador = CategoriaAdaptador(sub) { seleccion ->
-
             when(seleccion.nombre){
 
-                "Alicante" -> {
-                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TAlicanteFragment)
+                "Mazapanes" -> {
+                    findNavController().navigate(R.id.action_pasteleriaSeccionFragment_to_PMazapanesFragment)
+
 
                 }
 
-                "Jijona" -> {
+                "Polvorones" -> {
+                    findNavController().navigate(R.id.action_pasteleriaSeccionFragment_to_PPolvoronesFragment)
 
-                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TJijonaFragment)
-
-                }
-
-                "Guirlache" ->{
-                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TGuirlacheFragment)
 
                 }
 
-                "Mazapan" -> {
-                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TMazapanFragment)
-
-                }
-
-                "Cacahuete" -> {
-                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TCacahueteFragment)
-
-                }
-
-                "A la piedra" -> {
-                    findNavController().navigate(R.id.action_turronesSeccionFragment_to_TPiedraFragment)
+                "Pasteles" -> {
+                    findNavController().navigate(R.id.action_pasteleriaSeccionFragment_to_PPastelesFragment)
 
                 }
             }
@@ -76,5 +64,4 @@ class TurronesSeccionFragment : Fragment() {
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adaptador
     }
-
 }

@@ -58,5 +58,7 @@ class MainFragment : Fragment() {
         val layoutManager = LinearLayoutManager(requireContext())
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adaptador
+
+
     }
 }

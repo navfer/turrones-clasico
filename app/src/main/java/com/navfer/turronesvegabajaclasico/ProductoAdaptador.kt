@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ProductoAdaptador(private val productos: List<Producto>): RecyclerView.Adapter<ProductoAdaptador.ViewHolder>() {
+class ProductoAdaptador(private val productos: List<Producto>, private val AddClick: (Producto) -> Unit): RecyclerView.Adapter<ProductoAdaptador.ViewHolder>() {
 
     private var posicionSelecionada: Int = -1
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
@@ -17,7 +17,7 @@ class ProductoAdaptador(private val productos: List<Producto>): RecyclerView.Ada
         var descripcion: TextView
         var peso: TextView
         var botonAdd: Button
-        var botonDelete: Button
+
 
         init {
             imagen = view.findViewById(R.id.imagenProducto)
@@ -25,7 +25,6 @@ class ProductoAdaptador(private val productos: List<Producto>): RecyclerView.Ada
             descripcion = view.findViewById(R.id.descripcionProducto)
             peso = view.findViewById(R.id.pesoProducto)
             botonAdd = view.findViewById(R.id.btn_add)
-            botonDelete = view.findViewById(R.id.btn_delete)
         }
     }
 
@@ -47,13 +46,8 @@ class ProductoAdaptador(private val productos: List<Producto>): RecyclerView.Ada
         holder.peso.text = producto.peso.toString() + " kg."
 
         //añade al carrito
-        holder.botonAdd.setOnClickListener{
-
-        }
-
-        //borra elemento del carrito
-        holder.botonDelete.setOnClickListener{
-
+        holder.botonAdd.setOnClickListener {
+            AddClick(producto)
         }
     }
 }

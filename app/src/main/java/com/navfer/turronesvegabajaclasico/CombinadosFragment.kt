@@ -6,11 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.navfer.turronesvegabajaclasico.carrito.CarritoViewModel
 
 class CombinadosFragment : Fragment() {
-
+    private val viewModel: CarritoViewModel by activityViewModels()
     companion object {
         fun newInstance(): CombinadosFragment {
             return CombinadosFragment()
@@ -36,7 +38,9 @@ class CombinadosFragment : Fragment() {
 
         // Configuración del RecyclerView
         val productos = Categoria.getProductos("Packs")
-        val adaptador = ProductoAdaptador(productos)
+        val adaptador = ProductoAdaptador(productos) { producto ->
+            viewModel.addProducto(producto)
+        }
         Log.d("Info", "$productos")
 
         val layoutManager = LinearLayoutManager(requireContext())
