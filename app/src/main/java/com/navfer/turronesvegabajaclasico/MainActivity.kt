@@ -32,14 +32,5 @@ class MainActivity : AppCompatActivity() {
         //vinculacion del navController con el toolbar para mostrar botón backTo <-
         NavigationUI.setupWithNavController(toolbar, navController)
 
-
-        /**
-         * Configuración para que el FloatingActionButton navegue a un nuevo fragmento y nos lleve al carrito.
-         * Usamos la acción global para poder navegar al carrito desde cualquier fragmento.
-         */
-        val botonCarrito: FloatingActionButton = findViewById(R.id.botonCarritoCompra)
-        botonCarrito.setOnClickListener {
-            findNavController(R.id.navHostFragment).navigate(R.id.action_global_carritoFragment)
-        }
     }
 }

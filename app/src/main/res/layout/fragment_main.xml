@@ -3,20 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".MainFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-
             android:id="@+id/recyclerView"
             android:layout_width="409dp"
+            android:layout_height="729dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- Botón del carrito de la compra-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/botonCarritoCompra"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp"
-            tools:ignore="MissingConstraints" />
+            android:backgroundTint="@color/principal"
+            android:clickable="true"
+            android:src="@drawable/carrito_compra"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.976" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

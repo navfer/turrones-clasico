@@ -37,21 +37,6 @@
             app:layout_constraintTop_toBottomOf="@id/toolbar"
             app:navGraph="@navigation/main_graph" />
 
-        <!-- Botón del carrito de la compra-->
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/botonCarritoCompra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/principal"
-            android:clickable="true"
-            android:src="@drawable/carrito_compra"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.954"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.976" />
-
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="137dp"
