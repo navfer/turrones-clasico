@@ -7,7 +7,9 @@ Este proyecto está desarrollado utilizando la arquitectura tradicional de Andro
 Integra los siguientes elementos:  
 - Actividades.  
 - Fragmentos.  
-- Navegación.  
+- Navegación.
+
+![Capturas](aplicacion.png)  
 
 ## Construcción
 Se utilizaron las siguientes tecnologías para su construcción:  
