@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_mainFragment_to_turronesSeccionFragment"
             app:destination="@id/turronesSeccionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
     </fragment>
     <fragment
         android:id="@+id/carritoFragment"
@@ -119,9 +122,6 @@
         android:label="Turrones: A la piedra"
         tools:layout="@layout/fragment_t_piedra" />
 
-    <action
-        android:id="@+id/action_global_carritoFragment"
-        app:destination="@id/carritoFragment" />
     <fragment
         android:id="@+id/pedidoFragment"
         android:name="com.navfer.turronesvegabajaclasico.PedidoFragment"

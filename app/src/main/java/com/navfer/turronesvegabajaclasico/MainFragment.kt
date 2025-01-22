@@ -29,13 +29,10 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
-        /**
-         * Configuración para que el FloatingActionButton navegue a un nuevo fragmento y nos lleve al carrito.
-         * Usamos la acción global para poder navegar al carrito desde cualquier fragmento.
-         */
+
         val botonCarrito: FloatingActionButton = view.findViewById(R.id.botonCarritoCompra)
         botonCarrito.setOnClickListener {
-            findNavController().navigate(R.id.action_global_carritoFragment)
+            findNavController().navigate(R.id.action_mainFragment_to_carritoFragment)
         }
 
         //Configuración del recyclerView
